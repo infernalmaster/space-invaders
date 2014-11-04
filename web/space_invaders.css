@@ -1,0 +1,26 @@
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 15px;
+  text-align: center;
+}
+
+h1, p, a {
+  color: #333;
+  font-weight: 300;
+}
+h1 {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+#game {
+  border: 1px solid gray;
+}
+
