@@ -19,6 +19,9 @@ p {
   margin-top: 0;
   font-size: 25px;
 }
+.small {
+  font-size: 16px;
+}
 
 #game {
   border: 1px solid gray;
