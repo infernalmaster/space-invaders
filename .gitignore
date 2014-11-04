@@ -1,5 +1,5 @@
 # Don’t commit the following directories created by pub.
-build/web/*/
+build/web/packages/*/*
 !build/web/packages/browser/dart.js
 
 /packages/
