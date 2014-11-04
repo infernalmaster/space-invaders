@@ -5,12 +5,5 @@ build/web/packages/*/*
 /packages/
 .buildlog
 
-# Or the files created by dart2js.
-*.dart.js
-*.dart.precompiled.js
-*.js_
-*.js.deps
-*.js.map
-
 # Include when developing application packages.
 pubspec.lock
