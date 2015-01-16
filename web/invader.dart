@@ -1,25 +1,22 @@
 part of game;
 
 class Invader extends GameEntity {
-  double patrolX = 0.0;
+	double patrolX = 0.0;
+	bool shoot = false;
+	bool ClearShootingPath = true;
 
-  Invader(Game game, Vector2 center, Vector2 size, Vector2 velocity) : super(game, center, size, velocity) {}
+	Invader(Vector2 center, Vector2 size, Vector2 velocity) : super(center, size, velocity) {}
 
-  update() {
-    if (this.patrolX < 0 || this.patrolX > 30) {
-      velocity.x *= -1;
-    }
-    center.add(velocity);
-    patrolX += this.velocity.x;
+	update() {
+		if (this.patrolX < 0 || this.patrolX > 30) {
+			velocity.x *= -1;
+		}
+		center.add(velocity);
+		patrolX += this.velocity.x;
+	}
 
-    if (game.shaker.nextInt(1000) > 995 && !game.areAnyInvadersBelow(this)) {
-      game.addBody(new Bullet(
-        game,
-        center.clone().add(new Vector2(0.0, size.y/2 + 2)),
-        new Vector2(3.0, 3.0),
-        new Vector2(0.0, 2.0)
-      ));
-    }
-  }
-
+	bool isBelow(Invader inv) {
+		// X-check?
+		return ((this.center.y > inv.center.y));
+	}
 }
